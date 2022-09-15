@@ -1,0 +1,101 @@
+.taskContainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.footerToDoList {
+    margin-top: 105px;
+    border: 1px solid black;
+    height: 82px;
+    background: #e0e0e0;
+    display: flex;
+}
+
+.taskCheckBox {
+    width: 100%;
+    margin: auto;
+}
+
+.taskCheckBox input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+.form-check {
+    float: left;
+}
+
+.buttonItem {
+    float: left;
+    display: flex;
+}
+
+.buttonItem button {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.btnRemove {
+    left: 1142px;
+    top: 979px;
+    width: 110px;
+    height: 36px;
+    color: #ffffff;
+    font-family: Arimo;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    background: #d9534f;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px !important;
+}
+
+.btnDone {
+    left: 1142px;
+    top: 979px;
+    width: 110px;
+    height: 36px;
+    color: #ffffff;
+    font-family: Arimo;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    background: #2196f3;
+    border: none;
+    border-radius: 10px;
+}
+
+.Rectangle {
+    border: 1px solid #000000;
+    border-radius: 0px;
+    padding: 50px 0px 0px !important;
+}
+
+.fAddTask {
+    padding: 50px !important;
+}
+
+@media (min-width: 1000px) {
+    .col-md-5 {
+        flex: 0 0 41.666667% !important;
+        max-width: 41.666667% !important;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .col-sm-12 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+.titleTask {
+    margin-left: auto;
+    margin-right: auto;
+}

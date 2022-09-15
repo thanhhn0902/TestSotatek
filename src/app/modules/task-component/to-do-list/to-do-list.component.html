@@ -1,0 +1,9 @@
+<div class="container wrapperToDoList">
+    <input type="title" class="form-control" id="inputTitle" placeholder="Search ..." [(ngModel)]="keySearch"
+        (ngModelChange)="searhData()">
+    <div class="listTask">
+        <app-selected-item *ngFor="let item of lstData | filter: true" [data]="item"
+            (selectedItemEmit)="onSelectedItem($event)" (deleteItemEmit)="onDelete($event)"
+            (changeCkItemEmit)="onChangeItem($event)"></app-selected-item>
+    </div>
+</div>

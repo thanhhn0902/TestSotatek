@@ -1,0 +1,23 @@
+<div class="row taskContainer">
+    <div class="fAddTask col-md-5 col-sm-12 col-xs-12 Rectangle">
+        <p class="titleTask">New Task</p>
+        <app-add-task (addItemEmit)="onEmitCreate($event)"></app-add-task>
+    </div>
+    <div class="fToDoList col-md-7 col-sm-12 col-xs-12 Rectangle">
+        <p class="titleTask">To Do List</p>
+        <app-to-do-list [lstData]="data" (lstDataEmit)="onChangeData($event)"></app-to-do-list>
+        <div class="footerToDoList" *ngIf="onCheckItem()">
+            <div class="form-group taskCheckBox">
+                <div class="form-check col-md-7 col-sm-8 col-xs-12">
+                    <label for="gridCheck">
+                        Bulk Action:
+                    </label>
+                </div>
+                <div class="buttonItem col-md-5 col-sm-4 col-xs-12">
+                    <button type="button" class="btnDone">Done</button>
+                    <button type="button" class="btnRemove" (click)="onClickRemoveAll()">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

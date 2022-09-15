@@ -1,0 +1,66 @@
+<div class="detail">
+    <div class="form-group taskCheckBox">
+        <div class="form-check col-md-7 col-sm-8 col-xs-12">
+            <input type="checkbox" id="gridCheck" name="ischecked" [(ngModel)]="data.isChecked"
+                (ngModelChange)="onChange()">
+            <label for="gridCheck" style="margin-left:20px;" class="textDetail">
+                {{data.title}}
+            </label>
+        </div>
+        <div class="buttonItem col-md-5 col-sm-4 col-xs-12">
+            <button type="button" class="btnDetail" (click)="clickDetail()">Detail</button>
+            <button type="button" class="btnRemove" (click)="clickRemove()">Remove</button>
+        </div>
+    </div>
+</div>
+
+<!-- form detail -->
+<div class="fToDoList" *ngIf="data.isSelected">
+    <form class="container" #formGroupName="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <input type="title" class="form-control" id="inputTitle" placeholder="Add new task ..." name="title"
+                    [(ngModel)]="data.title" #title="ngModel" required>
+                <!-- validate form -->
+                <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger">
+                    <div *ngIf="title.errors?.['required']">
+                        title is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description" class="labelTask">Description</label><br>
+            <textarea name="Description" id="inputDescription" class="form-control" rows="3"
+                [(ngModel)]="data.description"></textarea>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputDate" class="labelTask">Due Date</label><br>
+                <input type="date" class="form-control" id="inputDate" name="dueDate" [(ngModel)]="dateFormated"
+                    #dueDate="ngModel" (ngModelChange)="checkDate()">
+                <!-- validate form -->
+                <div *ngIf="!ckDate && (dueDate.dirty || dueDate.touched)" class="alert alert-danger">
+                    <div *ngIf="dueDate.errors?.['required']">
+                        due Date is required.
+                    </div>
+                    <div *ngIf="!ckDate">
+                        do not accept days in the past as
+                        due date
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPiority" class="labelTask">Piority</label><br>
+                <select id="inputPiority" class="form-control" name="piority" [(ngModel)]="data.piority">
+                    <option *ngFor="let item of lsttPiority" value="{{item.value}}">{{item.text}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="footer">
+            <button type="submit" class="btn btn-primary btnTask"
+                [disabled]="!formGroupName.valid || !ckDate">Update</button>
+        </div>
+    </form>
+</div>

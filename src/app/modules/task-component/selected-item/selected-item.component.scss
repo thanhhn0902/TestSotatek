@@ -1,0 +1,98 @@
+.detail {
+    margin-top: 20px;
+    border: 1px solid black;
+    height: 70px;
+    display: flex;
+}
+
+.taskCheckBox {
+    margin: auto;
+    width: 100%;
+}
+
+.taskCheckBox input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+.buttonItem {
+    float: left;
+    display: flex;
+}
+
+.buttonItem button {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+// .buttonItem button:first-child {
+//     margin-right: -50px;
+// }
+
+.form-check {
+    float: left;
+}
+
+.btnDetail {
+    left: 1128px;
+    top: 242px;
+    width: 93px;
+    height: 27px;
+    color: #ffffff;
+    font-family: "Arimo";
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    background: #00bcd4;
+    border: none;
+    border-radius: 10px;
+}
+
+.btnRemove {
+    left: 1241px;
+    top: 241px;
+    width: 79px;
+    height: 28px;
+    color: #ffffff;
+    font-family: "Arimo";
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    background: #d9534f;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px !important;
+}
+
+.btnTask {
+    width: 100%;
+    background: #5cb85c;
+}
+
+.footer {
+    text-align: center;
+}
+
+.fToDoList {
+    border: 1px solid black;
+    padding: 50px;
+}
+
+.wrapperToDoList {
+    padding: 0px 50px 50px;
+}
+
+.textDetail {
+    left: 831px;
+    top: 243px;
+    width: 340px;
+    color: gray;
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    text-align: left;
+    line-height: 1px;
+    padding: 5px;
+}
